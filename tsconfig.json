@@ -5,6 +5,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
+    "strictNullChecks": true,
     "allowJs": true,
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
@@ -35,6 +36,6 @@
       }
     ]
   },
-  "include": ["./src/env.d.ts", "./src/files.d.ts", "tailwind.config.mjs"],
+  "include": ["./src/env.d.ts", "./src/files.d.ts", "tailwind.config.mjs", "./.astro/types.d.ts"],
   "exclude": [".vscode", "dist"]
 }

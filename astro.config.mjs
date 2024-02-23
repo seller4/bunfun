@@ -16,6 +16,9 @@ export default defineConfig({
       skip: ["useBadHook", /badVariable/g],
     }, }), yaml()],
   },
+  prefetch: {
+    prefetchAll: true
+  },
   site: 'https://funbun.vercel.app',
   markdown: {
     remarkPlugins: [remarkReadingTime],
