@@ -1,0 +1,79 @@
+{
+  "name": "bunfun",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "bunx --bun astro dev --open",
+    "start": "bun astro check && bunx --bun astro dev --verbose",
+    "build": "bunx --bun astro build && pagefind --site dist",
+    "postbuild": "pagefind --site dist",
+    "preview": "bunx --bun astro preview",
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
+    "biformat": "biome format --write ./src",
+    "bilint": "biome check --apply ./src",
+    "biomes": "bun run bilint && bun run biformat",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.5",
+    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/partytown": "^2.0.4",
+    "@astrojs/react": "^3.0.10",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.1.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.4.0",
+    "@pagefind/default-ui": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/react": "^18.2.58",
+    "@types/react-dom": "^18.2.19",
+    "astro": "^4.4.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "date-fns": "^3.3.1",
+    "framer-motion": "^11.0.3",
+    "lucide-react": "^0.323.0",
+    "mdast-util-to-string": "^4.0.0",
+    "mdast-util-toc": "^7.0.0",
+    "million": "latest",
+    "motion": "^10.16.4",
+    "pagefind": "^1.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reading-time": "^1.5.0",
+    "remark": "^15.0.1",
+    "sharp": "^0.33.2",
+    "slugify": "^1.6.6",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "latest",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "@types/bun": "latest",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.53.0",
+    "eslint-plugin-astro": "0.31.4",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "lint-staged": "15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "0.13.0",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  },
+  "lint-staged": {
+    "*.{astro,js,jsx,ts,tsx,md,mdx,json}": [
+      "prettier --write --plugin-search-dir=."
+    ]
+  },
+  "trustedDependencies": [
+    "sharp"
+  ]
+}
